@@ -42,6 +42,10 @@ const Keyboard = {
   createKeys() {
     const fragment = document.createDocumentFragment();
     const keyLayout = ["1", "2"];
+
+    const createIconHTML = (icon_name) => {
+      return `<i class="material-icons">${icon_name}</i>`;
+    };
   },
 };
 
