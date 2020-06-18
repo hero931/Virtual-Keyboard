@@ -114,6 +114,22 @@ const Keyboard = {
           });
 
           break;
+        case "caps":
+          keyElement.classList.add(
+            "keyboard__key--wide",
+            "keyboard__key--activatable"
+          );
+          keyElement.innerHTML = createIconHTML("keyboard_capslock");
+
+          keyElement.addEventListener("click", () => {
+            this.toggleCapsLock();
+            keyElement.classList.toggle(
+              "keyboard__key--active",
+              this.properties.capsLock
+            );
+          });
+
+          break;
       }
     });
   },
